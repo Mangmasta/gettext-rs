@@ -159,10 +159,10 @@ fn main() {
            .arg(&src.join("gettext-0.19.8.1.tar.xz"))
            .arg("--strip-components")
            .arg("1");
-        if host.contains("windows") {
+        /*if host.contains("windows") {
             // tar confuses local path with a remote resource because of ':'
             cmd.arg("--force-local");
-        }
+        }*/
         run(&mut cmd, "tar");
     }
 
